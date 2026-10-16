@@ -47,7 +47,7 @@
           radial-gradient(circle at 50% 48%, #3a0ca3 0%, transparent 52%),
           linear-gradient(145deg, #2b0050, #120024 42%, #001b2e);
         background-size: 160% 160%;
-        animation: drift 14s ease-in-out infinite alternate;
+        animation: drift 8s ease-in-out infinite alternate;
       }
 
       .stage::after {
@@ -137,13 +137,13 @@
         row-gap: 0.08em;
         font-size: clamp(3.1rem, 13vw, 8.4rem);
         font-weight: 800;
-        line-height: 1.15;
+        line-height: 1.4;
         letter-spacing: -0.03em;
       }
 
       .word {
         display: inline-flex;
-        padding: 0.12em 0;
+        padding: 0.28em 0 0.08em;
       }
 
       .letter {
@@ -155,16 +155,16 @@
           0 0.08em 0 rgba(20, 0, 30, 0.28),
           0 0 0.35em hsl(var(--hue) 100% 62% / 0.85);
         transform-origin: 50% 80%;
-        animation: wave 2.2s ease-in-out infinite;
-        animation-delay: calc(var(--i) * 0.09s);
+        animation: wave 1.5s ease-in-out infinite;
+        animation-delay: calc(var(--i) * 0.08s);
         cursor: default;
         transition: filter 0.2s ease;
       }
 
       .letter:hover {
         animation: none;
-        transform: translateY(-0.28em) scale(1.22) rotate(-8deg);
-        filter: brightness(1.15);
+        transform: translateY(-0.5em) scale(1.4) rotate(-12deg);
+        filter: brightness(1.2);
       }
 
       .hint {
@@ -193,12 +193,14 @@
 
       @keyframes wave {
         0%,
-        55%,
         100% {
           transform: translateY(0) rotate(0deg);
         }
-        25% {
-          transform: translateY(-0.22em) rotate(-7deg);
+        35% {
+          transform: translateY(-0.55em) rotate(-12deg);
+        }
+        65% {
+          transform: translateY(0.12em) rotate(6deg);
         }
       }
 
